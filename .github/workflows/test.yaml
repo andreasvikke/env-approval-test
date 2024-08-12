@@ -1,0 +1,66 @@
+name: Deploy (be, co.uk, rest)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: |
+          echo Building...
+
+  be-tag:
+    runs-on: ubuntu-latest
+    environment: 'be'
+    steps:
+      - name: Tag semver
+        run: |
+          echo be tag...
+
+  gb-tag:
+    runs-on: ubuntu-latest
+    environment: 'gb'
+    steps:
+      - name: Tag semver
+        run: |
+          echo gb tag...
+
+  dk-tag:
+    runs-on: ubuntu-latest
+    environment: 'dk'
+    steps:
+      - name: Tag semver
+        run: |
+          echo dk tag...
+
+  no-tag:
+    runs-on: ubuntu-latest
+    environment: 'no'
+    steps:
+      - name: Tag semver
+        run: |
+          echo no tag...
+
+  se-tag:
+    runs-on: ubuntu-latest
+    environment: 'se'
+    steps:
+      - name: Tag semver
+        run: |
+          echo se tag...
+
+  fi-tag:
+    runs-on: ubuntu-latest
+    environment: 'fi'
+    steps:
+      - name: Tag semver
+        run: |
+          echo fi tag...
